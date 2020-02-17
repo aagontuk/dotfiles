@@ -8,6 +8,7 @@ while true; do
 	sts="${sts} $($SDIR/net_status.sh) | "
 	sts="${sts} $($SDIR/bat_status.sh) | "
 	sts="${sts} $(date '+%a %b-%d-%Y %I:%M:%S %p') "
-	echo "%{r}%{B#9A6324}%{F#000075}$sts"
-	sleep 5
+    lsts="$(~/dotfiles/lemonbar/wspace_status.sh)"
+	echo "%{l}$lsts%{r}%{B#9A6324}%{F#000075}$sts"
+	sleep 1
 done
