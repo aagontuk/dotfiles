@@ -4,6 +4,7 @@ SDIR=~/dotfiles/tmux
 while true; do
 	sts=""
 	sts="${sts} $($SDIR/mem_status.sh) | "
+	sts="${sts} $($SDIR/disk_status.sh) | "
 	sts="${sts} $($SDIR/net_status.sh) | "
 	sts="${sts} $($SDIR/bat_status.sh) | "
 	sts="${sts} $(date '+%a %b-%d-%Y %I:%M:%S %p') "
