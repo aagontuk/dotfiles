@@ -1,4 +1,3 @@
 #!/bin/bash
 
-printf "%s %s" `acpi | awk '{print substr($4, 1, length($4)-1) "%"}'`\
-	`acpi -a | awk '{print $3}'`
+printf "%s%% %s" $(cat /sys/class/power_supply/BAT0/capacity) $(cat /sys/class/power_supply/AC/online | awk '{if ($1 == 1) print "on-line"; else print "off-line"}')
