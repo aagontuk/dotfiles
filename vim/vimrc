@@ -26,6 +26,8 @@ set runtimepath-=~/.vim/bundle/SimpylFold
 
 " Set wildmenu
 set wildmenu
+" Can switch buffer without writing
+set hidden
 
 " line number
 set nu
@@ -42,7 +44,7 @@ set shiftwidth=4
 " Use SPACE as leader key
 let mapleader = " "
 
-" remap Esc to jj as Esc is too far
+" remap Esc to ii as Esc is too far
 inoremap ii <Esc>
 
 " remap movement in insert mode
