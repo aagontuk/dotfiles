@@ -56,6 +56,9 @@ inoremap <C-j> <Down>
 " Switching buffer by number
 nnoremap <leader>l :buffers<CR>:buffer<Space>
 
+" Insert current date and time in normal mode
+:nnoremap <leader>m "=strftime("%b-%d-%Y %H:%M")<CR>P
+
 " remap tab movements
 nnoremap <C-l> gt 
 nnoremap <C-h> gT 
@@ -100,6 +103,3 @@ let g:SimpylFold_docstring_preview=1
 
 " tagbar configuration
 map <F8> :TagbarToggle<CR>
-
-" ASCII cat
-echom ">^.^<"
