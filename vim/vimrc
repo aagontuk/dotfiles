@@ -47,11 +47,9 @@ let mapleader = " "
 " remap Esc to ii as Esc is too far
 inoremap ii <Esc>
 
-" remap movement in insert mode
-inoremap <C-h> <Left>
-inoremap <C-l> <Right>
-inoremap <C-k> <Up>
-inoremap <C-j> <Down>
+" Prev/Next buffer
+nnoremap <C-k> :bp<CR>
+nnoremap <C-j> :bn<CR>
 
 " Switching buffer by number
 nnoremap <leader>l :buffers<CR>:buffer<Space>
