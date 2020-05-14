@@ -15,12 +15,15 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
+Plugin 'pseewald/anyfold'
+Plugin 'jlanzarotta/bufexplorer'
 
 call vundle#end()
 filetype plugin indent on
 
 " disabled plugins
 set runtimepath-=~/.vim/bundle/SimpylFold
+set runtimepath-=~/.vim/bundle/AnyFold
 
 " General configuration
 
@@ -52,7 +55,7 @@ nnoremap <C-k> :bp<CR>
 nnoremap <C-j> :bn<CR>
 
 " Switching buffer by number
-nnoremap <leader>l :buffers<CR>:buffer<Space>
+nnoremap <leader>l :ToggleBufExplorer<CR>
 
 " Insert current date and time in normal mode
 :nnoremap <leader>m "=strftime("%b-%d-%Y %H:%M")<CR>P
@@ -71,9 +74,20 @@ set splitbelow
 " Alias for opening terminal in right vertical split
 " without creating a new copy of the current window
 command Term :vs|:term ++curwin
-noremap <leader>t :Term<CR>
 
-" keyboard shortcut for openig terminal
+" keyboard shortcut for openig vertical terminal
+noremap <leader>v :Term<CR>
+
+" keyboard shortcut for openig horizontal terminal
+noremap <leader>h :term<CR>
+
+" Change to normal mode
+tnoremap <Esc> <C-w>N
+
+" AnyFold configurations 
+" autocmd Filetype * AnyFoldActivate
+" set foldlevel=0
+
 
 " deus colorscheme setup
 " NOTE: Does't work properly in gnome-terminal
