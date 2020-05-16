@@ -1,4 +1,8 @@
-" required for Vundle
+""""""""""""""""""
+" PLUGIN MANAGER "
+""""""""""""""""""
+
+
 set nocompatible
 filetype off
 
@@ -25,7 +29,11 @@ filetype plugin indent on
 set runtimepath-=~/.vim/bundle/SimpylFold
 set runtimepath-=~/.vim/bundle/AnyFold
 
-" General configuration
+
+"""""""""""""""""""""""""
+" GENERAL CONFIGURATION "
+"""""""""""""""""""""""""
+
 
 " Set wildmenu
 set wildmenu
@@ -71,6 +79,13 @@ set splitbelow
 " open help in a horizontal split
 :cabbrev h vert h
 
+
+
+""""""""""""""""""""""""""""""
+" VIM TERMINAL CONFIGURATION "
+""""""""""""""""""""""""""""""
+
+
 " Alias for opening terminal in right vertical split
 " without creating a new copy of the current window
 command Term :vs|:term ++curwin
@@ -81,8 +96,17 @@ noremap <leader>v :Term<CR>
 " keyboard shortcut for openig horizontal terminal
 noremap <leader>h :term<CR>
 
+" keyboard shortcut for openiga terminal in tab
+noremap <leader>t :tab term<CR>
+
 " Change to normal mode
-tnoremap <Esc> <C-w>N
+tnoremap <C-n> <C-w>N
+
+
+"""""""""""""""""""""""""
+" PLUGINS CONFIGURATION "
+"""""""""""""""""""""""""
+
 
 " AnyFold configurations 
 " autocmd Filetype * AnyFoldActivate
