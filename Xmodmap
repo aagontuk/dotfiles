@@ -1,0 +1,14 @@
+! Remove caps lock
+clear lock
+
+! Assing grave to caps lock
+keycode 66 = grave NoSymbol grave
+
+! Assign tilde to Shift + Tab
+keycode 23 = Tab asciitilde Tab asciitilde
+
+! Change Menu key as Right Control
+remove Control = Control_R
+keycode 105 = Control_R NoSymbol Control_R
+keycode 135 = Control_R NoSymbol Control_R
+add Control = Control_R
