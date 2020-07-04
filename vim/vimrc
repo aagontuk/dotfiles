@@ -79,6 +79,16 @@ set splitbelow
 " open help in a horizontal split
 :cabbrev h vert h
 
+""""""""""""""""""""""""
+" CSCOPE CONFIGURATION "
+""""""""""""""""""""""""
+
+
+" add cscope database file
+cs add $CSCOPE_DB
+
+" Use relative path for tags
+set cscoperelative
 
 
 """"""""""""""""""""""""""""""
