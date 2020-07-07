@@ -59,8 +59,8 @@ let mapleader = " "
 inoremap ii <Esc>
 
 " Prev/Next buffer
-nnoremap <C-k> :bp<CR>
-nnoremap <C-j> :bn<CR>
+nnoremap <C-k> 5k
+nnoremap <C-j> 5j
 
 " Switching buffer by number
 nnoremap <leader>l :ToggleBufExplorer<CR>
