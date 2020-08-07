@@ -21,6 +21,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'pseewald/anyfold'
 Plugin 'jlanzarotta/bufexplorer'
+Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 
 call vundle#end()
 filetype plugin indent on
@@ -28,6 +29,7 @@ filetype plugin indent on
 " disabled plugins
 set runtimepath-=~/.vim/bundle/SimpylFold
 set runtimepath-=~/.vim/bundle/AnyFold
+set runtimepath-=~/.vim/bundle/YouCompleteMe
 
 
 """""""""""""""""""""""""
@@ -59,8 +61,8 @@ let mapleader = " "
 inoremap ii <Esc>
 
 " Prev/Next buffer
-nnoremap <C-k> 5k
-nnoremap <C-j> 5j
+nnoremap <C-k> 20k
+nnoremap <C-j> 20j
 
 " Switching buffer by number
 nnoremap <leader>l :ToggleBufExplorer<CR>
@@ -136,9 +138,16 @@ let g:deus_termcolors=256
 
 " ycm set up
 let g:ycm_global_ycm_extra_conf = '$HOME/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
+let g:ycm_min_num_of_chars_for_completion = 1
+let g:ycm_collect_identifiers_from_comments_and_strings = 1
 let g:ycm_filetype_whitelist = {'*': 1}
 let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_semantic_triggers = {'c' : 're![a-z]'}
+let g:ycm_semantic_triggers = {'c': ['->', '.'], 'cpp': ['->', '.', '::']}
+let g:ycm_collect_identifiers_from_tags_files = 1
+
+" coc setup
+let g:coc_node_path = '$HOME/bin/nodejs/bin/node'
+source $HOME/dotfiles/vim/coc.vim
 
 " NERDTree configuration
 " Toggle NERDTree with Ctrl+n
