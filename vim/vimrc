@@ -26,6 +26,14 @@ Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 call vundle#end()
 filetype plugin indent on
 
+" Other plugins I use that isn't supported by plugin manager
+" 
+" CmdlineComplete: Auto complete in vim command line
+" URL: https://web.archive.org/web/20200811120254/https://www.vim.org/scripts/script.php?script_id=2222
+"
+" cscope mapping for vim
+" URL: https://web.archive.org/web/20200811120513/http://cscope.sourceforge.net/cscope_vim_tutorial.html
+
 " disabled plugins
 set runtimepath-=~/.vim/bundle/SimpylFold
 set runtimepath-=~/.vim/bundle/AnyFold
