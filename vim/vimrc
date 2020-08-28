@@ -22,6 +22,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'pseewald/anyfold'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+Plugin 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 
 call vundle#end()
 filetype plugin indent on
@@ -88,6 +89,14 @@ set splitbelow
 
 " open help in a horizontal split
 :cabbrev h vert h
+
+" Mose support
+set mouse=a
+
+" Set the dictionary
+" Use <C-X><C-K><C-N> for plain vim
+" Install coc-dictionary if coc.vim is installed
+set dictionary+=/usr/share/dict/words
 
 """"""""""""""""""""""""
 " CSCOPE CONFIGURATION "
