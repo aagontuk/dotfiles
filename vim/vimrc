@@ -4,28 +4,21 @@
 
 
 set nocompatible
-filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'ajmwagar/vim-deus'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'tmhedberg/SimpylFold'
-Plugin 'kien/ctrlp.vim'
-Plugin 'majutsushi/tagbar'
-Plugin 'pseewald/anyfold'
-Plugin 'jlanzarotta/bufexplorer'
-Plugin 'neoclide/coc.nvim', {'branch': 'release'}
-Plugin 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+Plug 'ajmwagar/vim-deus'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'kien/ctrlp.vim'
+Plug 'majutsushi/tagbar'
+Plug 'jlanzarotta/bufexplorer'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 
-call vundle#end()
-filetype plugin indent on
+call plug#end()
 
 " Other plugins I use that isn't supported by plugin manager
 " 
@@ -36,9 +29,7 @@ filetype plugin indent on
 " URL: https://web.archive.org/web/20200811120513/http://cscope.sourceforge.net/cscope_vim_tutorial.html
 
 " disabled plugins
-set runtimepath-=~/.vim/bundle/SimpylFold
-set runtimepath-=~/.vim/bundle/AnyFold
-set runtimepath-=~/.vim/bundle/YouCompleteMe
+" set runtimepath-=~/.vim/bundle/SimpylFold
 
 
 """""""""""""""""""""""""
@@ -154,16 +145,16 @@ colorscheme deus
 let g:deus_termcolors=256
 
 " ycm set up
-let g:ycm_global_ycm_extra_conf = '$HOME/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
-let g:ycm_min_num_of_chars_for_completion = 1
-let g:ycm_collect_identifiers_from_comments_and_strings = 1
-let g:ycm_filetype_whitelist = {'*': 1}
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_semantic_triggers = {'c': ['->', '.'], 'cpp': ['->', '.', '::']}
-let g:ycm_collect_identifiers_from_tags_files = 1
+" let g:ycm_global_ycm_extra_conf = '$HOME/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
+" let g:ycm_min_num_of_chars_for_completion = 1
+" let g:ycm_collect_identifiers_from_comments_and_strings = 1
+" let g:ycm_filetype_whitelist = {'*': 1}
+" let g:ycm_autoclose_preview_window_after_completion = 1
+" let g:ycm_semantic_triggers = {'c': ['->', '.'], 'cpp': ['->', '.', '::']}
+" let g:ycm_collect_identifiers_from_tags_files = 1
 
 " coc setup
-let g:coc_node_path = '$HOME/bin/nodejs/bin/node'
+let g:coc_node_path = '/usr/bin/node'
 source $HOME/dotfiles/vim/coc.vim
 
 " NERDTree configuration
@@ -171,7 +162,7 @@ source $HOME/dotfiles/vim/coc.vim
 map <C-n> :NERDTreeToggle<CR>
 
 " SimplyFold configurations
-let g:SimpylFold_docstring_preview=1
+" let g:SimpylFold_docstring_preview=1
 
 " tagbar configuration
 map <F8> :TagbarToggle<CR>
